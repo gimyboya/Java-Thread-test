@@ -26,11 +26,13 @@ public class MinMax implements Runnable {
     max = 0;
     min = 0;
     fileHandler.OpenFileForRead();
-    for (int i = 0; i < items; i++) {
+
+    for (int i = 0; i < this.items ; i++) {
 
       if(i == 0){
-        max = fileHandler.readFromFile();
-        min = fileHandler.readFromFile();
+        temp = fileHandler.readFromFile();
+        max = temp;
+        min = temp;
       }else{
         temp = fileHandler.readFromFile();
         if(temp > max){

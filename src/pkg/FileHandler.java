@@ -26,21 +26,18 @@ public class FileHandler {
 
   public void WriteToFile(int items) {
     for (int i = 0; i < items; i++) {
-      Pen.format("%d ", (int)(Math.random() * 1000 + i));//format("%s,%s,%.0f\n",order.getDescription(),order.getDate(),order.getSales())
+      Pen.format("%d\n", (int)(Math.random() * 1000 + i));//format("%s,%s,%.0f\n",order.getDescription(),order.getDate(),order.getSales())
     }
     Pen.close();
   }
 
   public int readFromFile(){
     int number = 0;
-    this.Reader.useDelimiter(" ");
 
-    try{
-      number = this.Reader.nextInt();
-    }
-    catch (IndexOutOfBoundsException e){
-      return -1;
-    }
+      try{
+        number = this.Reader.nextInt();
+      }
+      catch (IndexOutOfBoundsException e){}
 
     return number;
   }
@@ -60,7 +57,7 @@ public class FileHandler {
 
   public void OpenFileForWrite(){
     try{
-      Pen = new Formatter(new BufferedWriter(new FileWriter(this.fileName, true)));
+      Pen = new Formatter(new BufferedWriter(new FileWriter(this.fileName, false)));
     }
     catch (Exception e){
 
