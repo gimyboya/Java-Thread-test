@@ -57,7 +57,7 @@ public class FileHandler {
 
   public void OpenFileForWrite(){
     try{
-      Pen = new Formatter(new BufferedWriter(new FileWriter(this.fileName, false)));
+      Pen = new Formatter(new BufferedWriter(new FileWriter(this.fileName, false))); //false is for overriding
     }
     catch (Exception e){
 

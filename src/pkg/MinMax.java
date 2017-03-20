@@ -45,7 +45,7 @@ public class MinMax implements Runnable {
       }
     }
     fileHandler.closeFile();
-    System.out.println("The largest number in the file " + this.fileName + " is: " + max + " and the smallest number is: " + min);
+    //System.out.println("The largest number in the file " + this.fileName + " is: " + max + " and the smallest number is: " + min);
     long endTime = System.currentTimeMillis();
     System.out.println("Time execution for reading " + this.items + " numbers and finding the max and min is " + (endTime - startTime) + " Ms");
   }

@@ -32,10 +32,10 @@ public class AddTwoArrays implements Runnable {
 
     for (int i = 0; i < this.size; i++) {
       resultArray[i] = this.ArrayOne[i] + this.ArrayTwo[i];
-      System.out.print("(" + ArrayOne[i] + " + " + ArrayTwo[i] + ") = " + resultArray[i] + " ");
+      //System.out.print("(" + ArrayOne[i] + " + " + ArrayTwo[i] + ") = " + resultArray[i] + " ");
     }
 
-    System.out.println("");
+    //System.out.println("");
 
     long endTime = System.currentTimeMillis();
 
